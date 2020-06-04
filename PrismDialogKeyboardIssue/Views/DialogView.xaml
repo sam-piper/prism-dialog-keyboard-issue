@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PrismDialogKeyboardIssue.Views.DialogView"
+    xmlns:prism="http://prismlibrary.com"
+    prism:DialogLayout.RelativeWidthRequest="0.85"
+    prism:DialogLayout.RelativeHeightRequest="0.9"
+    BackgroundColor="White"
+    CornerRadius="20">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Heading -->
+        <Label
+            Margin="0,75,0,10"
+            Text="Main heading"
+            HorizontalOptions="Center" />
+
+        <!-- Body -->
+        <Label
+            Grid.Row="2"
+            Margin="10,80,10,0"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="Some dialog text, blah blah blah" />
+
+        <!-- Close Button -->
+        <Button
+            Grid.Row="4"
+            Margin="0,0,0,40"
+            WidthRequest="100"
+            Text="Close"
+            Command="{Binding CloseCommand}"
+            HorizontalOptions="Center" />
+    </Grid>
+</Frame>
